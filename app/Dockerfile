@@ -20,3 +20,5 @@ EXPOSE 8000
 
 # Устанавливаем команду для запуска приложения
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+COPY wait-for-db.sh /wait-for-db.sh
+RUN chmod +x /wait-for-db.sh
